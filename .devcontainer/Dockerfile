@@ -1,6 +1,8 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.145.1/containers/java-8/.devcontainer/base.Dockerfile
+# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/java/.devcontainer/base.Dockerfile
 
-FROM mcr.microsoft.com/vscode/devcontainers/java:0-8
+# [Choice] Java version: 11, 14
+ARG VARIANT="14"
+FROM mcr.microsoft.com/vscode/devcontainers/java:0-${VARIANT}
 
 # [Option] Install Maven
 ARG INSTALL_MAVEN="false"
